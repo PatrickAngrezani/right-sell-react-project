@@ -24,7 +24,7 @@ const Hero: React.FC = () => {
           <InstagramIcon />
         </IconButton>
         <IconButton
-          href="https://linkedin.com"
+          href="https://www.linkedin.com/company/vendacerto"
           target="_blank"
           rel="noopener noreferrer"
           color="inherit"
