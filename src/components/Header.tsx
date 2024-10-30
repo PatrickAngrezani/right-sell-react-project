@@ -9,7 +9,6 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 
@@ -77,7 +76,12 @@ const Header: React.FC = () => {
 
         <Button
           color="inherit"
-          sx={{ fontWeight: "bold", textTransform: "none", mr: 2 }}
+          sx={{
+            fontWeight: "bold",
+            textTransform: "none",
+            mr: 2,
+            transition: "ease",
+          }}
         >
           Contato
         </Button>

@@ -1,28 +1,84 @@
 import React from "react";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, IconButton } from "@mui/material";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const Hero: React.FC = () => {
   return (
     <Box
       sx={{
-        padding: "4ram",
-        textAlign: "center",
-        backgroundColor: "#333",
-        color: "#fff",
+        backgroundColor: "#f5f5f5",
+        padding: "2rem 0",
+        transition: "linear",
       }}
     >
-      <Typography variant="h4" gutterBottom>
-        Prospecção e BPO Comercial
-      </Typography>
-      <Typography variant="body1">
-        A Venda Certo nasceu em 2019 para conectar os melhores profissionais
-        (LDR, SDR, BDR, Closer, CRM, Marketing, Copywriter e Customer Success)
-        do mercado às empresas e realizar o funil comercial de ponta a ponta.
-        Somos o primeiro “full” BPO comercial do mercado brasileiro.
-      </Typography>
-      <Button variant="contained" color="secondary" sx={{ marginTop: "2rem" }}>
-        Saiba Mais
-      </Button>
+      {/* social midia links */}
+      <Box sx={{ display: "flex", justifyContent: "center", gap: 1, mb: 2 }}>
+        <IconButton
+          href="https://instagram.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="inherit"
+          sx={{ color: "#E1306c" }}
+        >
+          <InstagramIcon />
+        </IconButton>
+        <IconButton
+          href="https://linkedin.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          color="inherit"
+          sx={{ color: "#0A66C2" }}
+        >
+          <LinkedInIcon />
+        </IconButton>
+      </Box>
+      {/* Title and green bar */}
+      <Box
+        sx={{
+          textAlign: "center",
+          padding: "1rem",
+          backgroundColor: "#007f3b",
+          color: "#fff",
+        }}
+      >
+        <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+          PROSPECÇÃO E BPO COMERCIAL
+        </Typography>
+      </Box>
+
+      {/* About us section */}
+      <Box sx={{ textAlign: "center", padding: "2rem" }}>
+        <Typography
+          variant="h5"
+          gutterBottom
+          sx={{ color: "#007f3b", fontWeight: "bold" }}
+        >
+          SOBRE NÓS...
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{ maxWidth: "800px", margin: "0 auto", lineHeight: 1.6 }}
+        >
+          A{" "}
+          <span style={{ color: "#007f3b", fontWeight: "bold" }}>
+            Venda Certo
+          </span>{" "}
+          nasceu em 2019 para conectar os melhores profissionais (
+          <em>
+            LDR, SDR, BDR, Closer, CRM, Marketing, Copywriter e Customer Success
+          </em>
+          ) do mercado às empresas e realizar o funil comercial de ponta a
+          ponta. Somos o primeiro “full” BPO comercial do mercado brasileiro.
+        </Typography>
+        <Button
+          variant="contained"
+          color="secondary"
+          sx={{ marginTop: "2rem" }}
+        >
+          Saiba Mais
+        </Button>
+      </Box>
     </Box>
   );
 };
