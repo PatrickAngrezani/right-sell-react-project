@@ -1,21 +1,66 @@
-import React from "react";
-import Header from "../src/components/Header.tsx";
-import Hero from "../src/components/Hero.tsx";
-import Services from "../src/components/Services.tsx";
-import Segments from "../src/components/Segments.tsx";
-import Clients from "../src/components/Clients.tsx";
-import Footer from "../src/components/Footer.tsx";
+import React, { useEffect, useState } from "react";
+import Header from "./components/Header.tsx";
+import Hero from "./components/Hero.tsx";
+import Services from "./components/Services.tsx";
+import Segments from "./components/Segments.tsx";
+import Clients from "./components/Clients.tsx";
+import Footer from "./components/Footer.tsx";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
+import AboutDetails from "./components/AboutDetails.tsx";
+
+const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const location = useLocation();
+  const [fadeState, setFadeState] = useState<"fade-in" | "fade-out">("fade-in");
+
+  useEffect(() => {
+    setFadeState("fade-out");
+
+    const timeout = setTimeout(() => {
+      setFadeState("fade-in");
+    }, 300);
+
+    return () => clearTimeout(timeout);
+  }, [location]);
+
+  return (
+    <div
+      style={{
+        opacity: fadeState === "fade-in" ? 1 : 0,
+        transition: "opacity 0.5s ease-in-out",
+      }}
+    >
+      {children}
+    </div>
+  );
+};
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Hero />
-      <Services />
-      <Segments />
-      <Clients />
-      <Footer />
-    </div>
+      <PageWrapper>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <Services />
+                <Segments />
+                <Clients />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/about" element={<AboutDetails />} />
+        </Routes>
+      </PageWrapper>
+    </Router>
   );
 }
 
