@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Button, IconButton } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { colors } from "../colors.tsx";
 
 const Hero: React.FC = () => {
   return (
@@ -73,8 +74,14 @@ const Hero: React.FC = () => {
         </Typography>
         <Button
           variant="contained"
-          color="secondary"
-          sx={{ marginTop: "2rem" }}
+          sx={{
+            backgroundColor: colors.actionBlue,
+            color: "#fff",
+            marginTop: "1rem",
+            "&:hover": {
+              backgroundColor: colors.actionBlueHover,
+            },
+          }}
         >
           Saiba Mais
         </Button>
