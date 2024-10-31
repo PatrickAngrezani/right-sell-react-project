@@ -3,8 +3,11 @@ import { Box, Typography, Button, IconButton } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { colors } from "../colors.tsx";
+import { useNavigate } from "react-router-dom";
 
 const Hero: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <Box
       sx={{
@@ -13,7 +16,6 @@ const Hero: React.FC = () => {
         transition: "linear",
       }}
     >
-      {/* social midia links */}
       <Box sx={{ display: "flex", justifyContent: "center", gap: 1, mb: 2 }}>
         <IconButton
           href="https://instagram.com"
@@ -34,7 +36,6 @@ const Hero: React.FC = () => {
           <LinkedInIcon />
         </IconButton>
       </Box>
-      {/* Title and green bar */}
       <Box
         sx={{
           textAlign: "center",
@@ -48,7 +49,6 @@ const Hero: React.FC = () => {
         </Typography>
       </Box>
 
-      {/* About us section */}
       <Box sx={{ textAlign: "center", padding: "2rem" }}>
         <Typography
           variant="h5"
@@ -82,6 +82,7 @@ const Hero: React.FC = () => {
               backgroundColor: colors.actionBlueHover,
             },
           }}
+          onClick={() => navigate("/about")}
         >
           Saiba Mais
         </Button>
