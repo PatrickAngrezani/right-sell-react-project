@@ -11,10 +11,14 @@ import {
 } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
+import { colors } from "../colors.tsx";
+import { useNavigate } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [anchorE1, setAnchorE1] = React.useState<null | HTMLElement>(null);
   const isMenuOpen = Boolean(anchorE1);
+
+  const navigate = useNavigate();
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorE1(event.currentTarget);
@@ -24,18 +28,27 @@ const Header: React.FC = () => {
     setAnchorE1(null);
   };
 
+  const goToHome = () => {
+    navigate("/");
+  };
+
   return (
     <AppBar
       position="static"
       sx={{ backgroundColor: "#1a1a1a", padding: "0 1rem" }}
     >
       <Toolbar>
-        {/* Image and Home button*/}
         <IconButton
           edge="start"
           color="inherit"
           aria-label="home"
-          sx={{ mr: 2 }}
+          sx={{
+            mr: 2,
+            "&:hover": {
+              backgroundColor: colors.darkGrayBackground,
+            },
+          }}
+          onClick={goToHome}
         >
           <HomeIcon />
         </IconButton>
@@ -54,11 +67,17 @@ const Header: React.FC = () => {
           ERTO
         </Typography>
 
-        {/* navigation links */}
         <Button
           color="inherit"
           onClick={handleMenuOpen}
-          sx={{ fontWeight: "bold", textTransform: "none", mr: 2 }}
+          sx={{
+            fontWeight: "bold",
+            textTransform: "none",
+            mr: 2,
+            "&:hover": {
+              backgroundColor: colors.darkGrayBackground,
+            },
+          }}
         >
           Venda Certo
         </Button>
@@ -75,18 +94,22 @@ const Header: React.FC = () => {
         </Menu>
 
         <Button
+          href="https://www.google.com/url?q=https%3A%2F%2Fwa.me%2F%2F5511959455865%3Ftext%3DVim%2520pelo%2520site%2520%2C%2520tenho%2520interesse%2520em%2520conhecer%2520mais%2520a%2520VendaCerto&sa=D&sntz=1&usg=AOvVaw2ht1pfRew_v7VKF9hm6fdj"
+          target="_blank"
           color="inherit"
           sx={{
             fontWeight: "bold",
             textTransform: "none",
             mr: 2,
             transition: "ease",
+            "&:hover": {
+              backgroundColor: colors.darkGrayBackground,
+            },
           }}
         >
           Contato
         </Button>
 
-        {/* Search Icon */}
         <IconButton color="inherit">
           <SearchIcon />
         </IconButton>

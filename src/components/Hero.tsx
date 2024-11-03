@@ -12,11 +12,10 @@ const Hero: React.FC = () => {
     <Box
       sx={{
         backgroundColor: "#f5f5f5",
-        padding: "2rem 0",
         transition: "linear",
       }}
     >
-      <Box sx={{ display: "flex", justifyContent: "center", gap: 1, mb: 2 }}>
+      <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
         <IconButton
           href="https://instagram.com"
           target="_blank"
