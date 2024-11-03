@@ -13,6 +13,7 @@ import {
 } from "react-router-dom";
 import AboutDetails from "./components/AboutDetails.tsx";
 import RTLMPage from "./components/RTLMPage.tsx";
+import TecnologiaPage from "./components/TecnologiaPage.tsx";
 
 const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
@@ -83,8 +84,8 @@ function App() {
           />
           <Route path="/about" element={<AboutDetails />} />
           <Route path="/rtlm" element={<RTLMPage />} />
-          {/* <Route path="/tecnologia" element={<TecnologiaPage />} />
-            <Route path="/diferenciais" element={<DiferenciaisPage />} />
+          <Route path="/tecnologia" element={<TecnologiaPage />} />
+            {/* <Route path="/diferenciais" element={<DiferenciaisPage />} />
             <Route path="/planos" element={<PlanosPage />} /> */}
         </Routes>
       </PageWrapper>
