@@ -65,16 +65,21 @@ npm start
 
 ```plaintext
 src/
-├── assets/              # Images and icons
-├── components/          # Project components
-│   ├── Header.tsx       # Header with logo, links, and social media icons
-│   ├── Hero.tsx         # Intro section
-│   ├── Services.tsx     # Services components
-│   ├── Segments.tsx     # Market segment components
-│   ├── Clients.tsx      # Clients section
-│   └── Footer.tsx       # Footer with additional information
-├── App.tsx              # Main component that organizes sections
-└── index.tsx            # Application entry point
+├── assets/                  # Images and icons
+├── components/              # Project components
+│   ├── AboutDetails.tsx     # Detailed about section
+│   ├── Clients.tsx          # Clients section
+│   ├── DiferenciaisPage.tsx # Diferenciais (Differentials) page component
+│   ├── Footer.tsx           # Footer with additional information
+│   ├── Header.tsx           # Header with logo, links, and social media icons
+│   ├── Hero.tsx             # Intro section
+│   ├── PlanosPage.tsx       # Plans page component
+│   ├── RTLMPages.tsx        # RTLM page component
+│   ├── Segments.tsx         # Market segment components
+│   ├── Services.tsx         # Services components
+│   └── TecnologiaPage.tsx   # Technology page component
+├── App.tsx                  # Main component that organizes sections
+└── index.tsx                # Application entry point
 ```
 
 ## Main Components
