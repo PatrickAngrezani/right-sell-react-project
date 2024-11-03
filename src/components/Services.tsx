@@ -8,6 +8,7 @@ import {
   Button,
   Grid,
 } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 import RTLMImage from "../assets/rtlm.png";
 import TecnologiaImage from "../assets/tecnologia.png";
@@ -18,6 +19,7 @@ interface Service {
   title: string;
   description: string | React.ReactNode;
   image: string;
+  path: string;
 }
 
 const services: Service[] = [
@@ -32,6 +34,7 @@ const services: Service[] = [
       </Typography>
     ),
     image: RTLMImage,
+    path: "/rtlm",
   },
   {
     title: "TECNOLOGIA",
@@ -43,6 +46,7 @@ const services: Service[] = [
       </Typography>
     ),
     image: TecnologiaImage,
+    path: "/tecnologia",
   },
   {
     title: "DIFERENCIAIS",
@@ -59,6 +63,7 @@ const services: Service[] = [
       </ul>
     ),
     image: DiferenciaisImage,
+    path: "/diferenciais",
   },
   {
     title: "PLANOS",
@@ -77,12 +82,14 @@ const services: Service[] = [
         </Box>
       </>
     ),
-
     image: PlansImage,
+    path: "/planos",
   },
 ];
 
 const Services: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <Box sx={{ padding: "4rem", textAlign: "center" }}>
       <Typography
@@ -115,6 +122,7 @@ const Services: React.FC = () => {
                       backgroundColor: "#f0f0f0",
                     },
                   }}
+                  onClick={() => navigate(service.path)}
                 >
                   Saiba Mais
                 </Button>
