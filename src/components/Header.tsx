@@ -9,26 +9,20 @@ import {
   Menu,
   MenuItem,
 } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
 import HomeIcon from "@mui/icons-material/Home";
 import { colors } from "../colors.tsx";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type HeaderProps = {
-  aboutRef: React.RefObject<HTMLDivElement>;
-  servicesRef: React.RefObject<HTMLDivElement>;
-  clientsRef: React.RefObject<HTMLDivElement>;
+  setScrollTarget: React.Dispatch<React.SetStateAction<string | null>>;
 };
 
-const Header: React.FC<HeaderProps> = ({
-  aboutRef,
-  servicesRef,
-  clientsRef,
-}) => {
+const Header: React.FC<HeaderProps> = ({ setScrollTarget }) => {
   const [anchorE1, setAnchorE1] = React.useState<null | HTMLElement>(null);
   const isMenuOpen = Boolean(anchorE1);
 
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleMenuOpen = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorE1(event.currentTarget);
@@ -42,8 +36,13 @@ const Header: React.FC<HeaderProps> = ({
     navigate("/");
   };
 
-  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
-    ref.current?.scrollIntoView({ behavior: "smooth" });
+  const handleNavigation = (section: string) => {
+    if (location.pathname !== "/") {
+      setScrollTarget(section);
+      navigate("/");
+    } else {
+      setScrollTarget(section);
+    }
     handleMenuClose();
   };
 
@@ -103,13 +102,13 @@ const Header: React.FC<HeaderProps> = ({
           anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
           transformOrigin={{ vertical: "top", horizontal: "center" }}
         >
-          <MenuItem onClick={() => scrollToSection(aboutRef)}>
+          <MenuItem onClick={() => handleNavigation("about")}>
             Sobre Nós
           </MenuItem>
-          <MenuItem onClick={() => scrollToSection(servicesRef)}>
+          <MenuItem onClick={() => handleNavigation("services")}>
             Serviços
           </MenuItem>
-          <MenuItem onClick={() => scrollToSection(clientsRef)}>
+          <MenuItem onClick={() => handleNavigation("clients")}>
             Clientes
           </MenuItem>
         </Menu>
@@ -130,10 +129,6 @@ const Header: React.FC<HeaderProps> = ({
         >
           Contato
         </Button>
-
-        <IconButton color="inherit">
-          <SearchIcon />
-        </IconButton>
       </Toolbar>
     </AppBar>
   );

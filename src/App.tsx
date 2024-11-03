@@ -40,17 +40,26 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 function App() {
+  const [scrollTarget, setScrollTarget] = useState<string | null>(null);
   const aboutRef = useRef<HTMLDivElement>(null);
   const servicesRef = useRef<HTMLDivElement>(null);
   const clientsRef = useRef<HTMLDivElement>(null);
 
+  useEffect(() => {
+    if (scrollTarget) {
+      const refs: { [key: string]: React.RefObject<HTMLDivElement> } = {
+        about: aboutRef,
+        services: servicesRef,
+        clients: clientsRef,
+      };
+      refs[scrollTarget]?.current?.scrollIntoView({ behavior: "smooth" });
+      setScrollTarget(null);
+    }
+  }, [scrollTarget]);
+
   return (
     <Router>
-      <Header
-        aboutRef={aboutRef}
-        servicesRef={servicesRef}
-        clientsRef={clientsRef}
-      />
+      <Header setScrollTarget={setScrollTarget} />
       <PageWrapper>
         <Routes>
           <Route
