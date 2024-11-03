@@ -14,7 +14,17 @@ import HomeIcon from "@mui/icons-material/Home";
 import { colors } from "../colors.tsx";
 import { useNavigate } from "react-router-dom";
 
-const Header: React.FC = () => {
+type HeaderProps = {
+  aboutRef: React.RefObject<HTMLDivElement>;
+  servicesRef: React.RefObject<HTMLDivElement>;
+  clientsRef: React.RefObject<HTMLDivElement>;
+};
+
+const Header: React.FC<HeaderProps> = ({
+  aboutRef,
+  servicesRef,
+  clientsRef,
+}) => {
   const [anchorE1, setAnchorE1] = React.useState<null | HTMLElement>(null);
   const isMenuOpen = Boolean(anchorE1);
 
@@ -30,6 +40,11 @@ const Header: React.FC = () => {
 
   const goToHome = () => {
     navigate("/");
+  };
+
+  const scrollToSection = (ref: React.RefObject<HTMLDivElement>) => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+    handleMenuClose();
   };
 
   return (
@@ -88,9 +103,15 @@ const Header: React.FC = () => {
           anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
           transformOrigin={{ vertical: "top", horizontal: "center" }}
         >
-          <MenuItem onClick={handleMenuClose}>Sobre Nós</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Serviços</MenuItem>
-          <MenuItem onClick={handleMenuClose}>Clientes</MenuItem>
+          <MenuItem onClick={() => scrollToSection(aboutRef)}>
+            Sobre Nós
+          </MenuItem>
+          <MenuItem onClick={() => scrollToSection(servicesRef)}>
+            Serviços
+          </MenuItem>
+          <MenuItem onClick={() => scrollToSection(clientsRef)}>
+            Clientes
+          </MenuItem>
         </Menu>
 
         <Button

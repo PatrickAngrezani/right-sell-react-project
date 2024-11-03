@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Header from "./components/Header.tsx";
 import Hero from "./components/Hero.tsx";
 import Services from "./components/Services.tsx";
@@ -25,7 +25,7 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     }, 300);
 
     return () => clearTimeout(timeout);
-  }, [location]);
+  }, [location.pathname]);
 
   return (
     <div
@@ -40,19 +40,33 @@ const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 };
 
 function App() {
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const servicesRef = useRef<HTMLDivElement>(null);
+  const clientsRef = useRef<HTMLDivElement>(null);
+
   return (
     <Router>
-      <Header />
+      <Header
+        aboutRef={aboutRef}
+        servicesRef={servicesRef}
+        clientsRef={clientsRef}
+      />
       <PageWrapper>
         <Routes>
           <Route
             path="/"
             element={
               <>
-                <Hero />
-                <Services />
+                <div ref={aboutRef}>
+                  <Hero />
+                </div>
+                <div ref={servicesRef}>
+                  <Services />
+                </div>
                 <Segments />
-                <Clients />
+                <div ref={clientsRef}>
+                  <Clients />
+                </div>
                 <Footer />
               </>
             }
