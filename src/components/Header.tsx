@@ -74,7 +74,7 @@ const Header: React.FC<HeaderProps> = ({ setScrollTarget }) => {
           <Box component="span" sx={{ color: "#00ff88", fontWeight: "bold" }}>
             V
           </Box>
-          ENDA
+          ENDA{" "}
           <Box component="span" sx={{ color: "#00ff88", fontWeight: "bold" }}>
             C
           </Box>
