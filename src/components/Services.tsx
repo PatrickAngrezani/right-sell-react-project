@@ -118,8 +118,9 @@ const Services: React.FC = () => {
                     fontWeight: "bold",
                     borderColor: "#333",
                     color: "#333",
-                    "&.hover": {
-                      backgroundColor: "#f0f0f0",
+                    "&:hover": {
+                      backgroundColor: "#d9d9d9",
+                      borderColor: "#333",
                     },
                   }}
                   onClick={() => navigate(service.path)}
