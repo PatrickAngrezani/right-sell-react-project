@@ -97,7 +97,7 @@ const Services: React.FC = () => {
         gutterBottom
         sx={{ fontWeight: "bold", color: "#007f3b" }}
       >
-        Nossos Serviços
+        Nossas Soluções
       </Typography>
       <Grid container spacing={4}>
         {services.map((service, index) => (

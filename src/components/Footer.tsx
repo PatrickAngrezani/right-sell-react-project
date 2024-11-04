@@ -30,7 +30,7 @@ function Footer() {
         Entre em contato com um de nossos especialistas
       </Button>
       <Typography sx={{ marginTop: "1 rem" }}>
-        © 2024 Venda Certo - Todos os direitos reservados
+        © 2019 Venda Certo - Todos os direitos reservados
       </Typography>
     </Box>
   );

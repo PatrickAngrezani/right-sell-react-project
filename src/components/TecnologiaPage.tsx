@@ -99,7 +99,7 @@ const TecnologiaPage: React.FC = () => {
         }}
       >
         <Typography variant="body2" color="textSecondary">
-          © 2024 Venda Certo - Todos os direitos reservados
+          © 2019 Venda Certo - Todos os direitos reservados
         </Typography>
       </Box>
     </Box>
