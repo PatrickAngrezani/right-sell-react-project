@@ -54,7 +54,7 @@ const Hero: React.FC = () => {
           gutterBottom
           sx={{ color: "#007f3b", fontWeight: "bold" }}
         >
-          SOBRE NÓS...
+          SOBRE NÓS
         </Typography>
         <Typography
           variant="body1"
@@ -64,12 +64,12 @@ const Hero: React.FC = () => {
           <span style={{ color: "#007f3b", fontWeight: "bold" }}>
             Venda Certo
           </span>{" "}
-          nasceu em 2019 para conectar os melhores profissionais (
+          foi fundada em 2019 com a missão de conectar empresas aos melhores
+          profissionais do mercado em cada etapa do funil comercial, como{" "}
           <em>
-            LDR, SDR, BDR, Closer, CRM, Marketing, Copywriter e Customer Success
-          </em>
-          ) do mercado às empresas e realizar o funil comercial de ponta a
-          ponta. Somos o primeiro “full” BPO comercial do mercado brasileiro.
+            LDR, SDR, BDR, Closer, CRM, Marketing, Copywriter e Customer Success.
+          </em>{" "}
+          Pioneira no Brasil, somos o primeiro BPO comercial completo, oferecendo uma solução ponta a ponta para otimizar e expandir operações comerciais.
         </Typography>
         <Button
           variant="contained"
