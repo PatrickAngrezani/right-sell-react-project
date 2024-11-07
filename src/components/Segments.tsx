@@ -6,7 +6,7 @@ const segments: string[] = [
   "STARTUP & INDÚSTRIA",
   "RECURSOS HUMANOS",
   "CORRETORAS & SEGURADORAS",
-  "MARKETING",
+  "VENDAS & MARKETING",
   "COMPRAS & OPERAÇÕES",
 ];
 
