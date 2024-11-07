@@ -27,10 +27,10 @@ const services: Service[] = [
     title: "RTLM",
     description: (
       <Typography>
-        O ser humano é primordial para nós e sem as pessoas, não seríamos nada!
-        Capacitar, engajar e elevar o nível dos profissionais, também é um dos
-        nossos pilares e por isso recrutamos, selecionamos e elevamos os
-        melhores.
+        As pessoas são nossa prioridade; sem elas, não seríamos nada! Capacitar,
+        engajar e desenvolver talentos é um dos nossos pilares fundamentais. Por
+        isso, recrutamos, selecionamos e investimos na formação dos melhores
+        profissionais, elevando continuamente seu nível de excelência.
       </Typography>
     ),
     image: RTLMImage,
@@ -136,7 +136,7 @@ const Services: React.FC = () => {
                 <Typography
                   variant="body2"
                   color="textSecondary"
-                  sx={{ textAlign: "left" }}
+                  sx={{ textAlign: "justify", minHeight: "190px" }}
                 >
                   {service.description}
                 </Typography>
