@@ -54,55 +54,58 @@ const DiferenciaisPage: React.FC = () => {
               <span style={{ fontWeight: "bold", color: colors.primaryGreen }}>
                 Sem fidelidade
               </span>
-              ;
+              : Oferecemos flexibilidade total, sem exigência de contratos de
+              fidelidade;
             </li>
             <li>
               <span style={{ fontWeight: "bold", color: colors.primaryGreen }}>
                 Sem custos de implantação
               </span>
-              : Realizamos uma implementação bem consultiva e sem custos
-              adicionais;
+              : Realizamos uma implementação altamente consultiva, sem custos
+              adicionais para o cliente;
             </li>
             <li>
               <span style={{ fontWeight: "bold", color: colors.primaryGreen }}>
                 Tecnologia
               </span>
-              : As melhores do mercado global e integradas no mesmo ambiente -
-              LGPD;
+              : Utilizamos as melhores tecnologias globais, totalmente
+              integradas em um único ambiente e em conformidade com a LGPD;
             </li>
             <li>
               <span style={{ fontWeight: "bold", color: colors.primaryGreen }}>
                 Redução de custos
               </span>
-              ;
+              : Otimizamos recursos e processos para promover economia
+              significativa;
             </li>
             <li>
               <span style={{ fontWeight: "bold", color: colors.primaryGreen }}>
-                Backup
+                Continuidade Garantida
               </span>
-              : Sem faltas, absenteísmo ou turnover;
+              : Operação sem interrupções, evitando problemas de absenteísmo,
+              faltas e turnover;
             </li>
             <li>
               <span style={{ fontWeight: "bold", color: colors.primaryGreen }}>
-                Exclusividade
+                Exclusividade de Atendimento
               </span>
-              : Não atuamos com mais de uma empresa do mesmo segmento ou que
-              fornece o mesmo serviço - zero conflito de interesses!;
+              : Atuamos com exclusividade para cada segmento e/ou tipo de
+              serviço, evitando conflitos de interesse;
             </li>
             <li>
               <span style={{ fontWeight: "bold", color: colors.primaryGreen }}>
-                Metodologia própria
+                Metodologia Proprietária
               </span>
-              : Embasada nos principais especialistas e estudos de mercado, sem
-              inventar a roda, com novos insights e moldado ao negócio do nosso
+              : Nossa metodologia é fundamentada em especialistas e pesquisas de
+              mercado, com abordagens inovadoras e personalizadas para cada
               cliente;
             </li>
             <li>
               <span style={{ fontWeight: "bold", color: colors.primaryGreen }}>
-                CRM
+                CRM Personalizado
               </span>
-              : Implantamos as melhores opções para o cliente - versões
-              gratuitas ou contratadas.
+              : Implementamos as melhores opções de CRM, sejam gratuitas ou
+              contratadas, adaptadas às necessidades específicas do cliente.
             </li>
           </Box>
         </Typography>

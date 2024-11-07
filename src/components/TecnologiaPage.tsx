@@ -37,7 +37,7 @@ const TecnologiaPage: React.FC = () => {
                 textAlign: "center",
               }}
             >
-              TECNOLOGIAS
+              TECNOLOGIA
             </Typography>
             <Typography
               variant="body1"
