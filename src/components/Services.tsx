@@ -40,9 +40,11 @@ const services: Service[] = [
     title: "TECNOLOGIA",
     description: (
       <Typography>
-        Promovemos inovações constantes e utilizamos tecnologia de ponta de
-        países como: Estados Unidos, Rússia, Ucrânia e Israel (todas homologadas
-        pela LGPD e suporte no Brasil) e integradas em um único ambiente:
+        Promovemos inovações contínuas e utilizamos tecnologias de ponta,
+        provenientes de países como Estados Unidos, Rússia, Ucrânia e Israel,
+        todas homologadas conforme a LGPD e com suporte no Brasil. Essas
+        soluções estão integradas em um único ambiente para maximizar a
+        eficiência e a segurança.
       </Typography>
     ),
     image: TecnologiaImage,
@@ -52,9 +54,10 @@ const services: Service[] = [
     title: "DIFERENCIAIS",
     description: (
       <ul style={{ paddingLeft: "1rem", margin: 0 }}>
+        <br/>
         <li>Sem fidelidade;</li>
         <li>Sem custos de implantação;</li>
-        <li>Tecnologia;</li>
+        <li>Tecnologia de ponta;</li>
         <li>Redução de custos;</li>
         <li>Backup;</li>
         <li>Exclusividade;</li>
@@ -70,15 +73,14 @@ const services: Service[] = [
     description: (
       <>
         <Typography variant="body2" gutterBottom>
-          Conheça nossos planos:
+          Conheça nossos planos, agende com um especialista!
         </Typography>
-        <Typography variant="body2" gutterBottom>
-          Contamos com os seguintes serviços disponíveis:
-        </Typography>
+        <br />
         <Box component="ul" sx={{ paddingLeft: "1rem", margin: 0 }}>
-          <li>Plano LDR;</li>
-          <li>Plano BDR;</li>
-          <li>Plano Closer.</li>
+          <li>Plano Basic;</li>
+          <li>Plano Standard;</li>
+          <li>Plano Premium;</li>
+          <li>Plano Customized.</li>
         </Box>
       </>
     ),
@@ -136,7 +138,7 @@ const Services: React.FC = () => {
                 <Typography
                   variant="body2"
                   color="textSecondary"
-                  sx={{ textAlign: "justify", minHeight: "190px" }}
+                  sx={{ textAlign: "center", minHeight: "190px" }}
                 >
                   {service.description}
                 </Typography>
