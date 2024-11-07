@@ -46,11 +46,12 @@ const RTLMPage: React.FC = () => {
             <strong style={{ color: colors.primaryGreen }}>
               Recrutamento & Seleção:
             </strong>{" "}
-            Usamos a RTLM, consultoria do grupo especializada em recrutar e
-            selecionar de forma passiva com banco de talentos próprio,
-            networkings, marketing e divulgação de vagas ou de forma ativa
-            através do hunting, candidatos da área comercial: LDR, SDR, BDR,
-            closer, marketing, CRM, CS, CX e CSM.
+            Contamos com a RTLM, nossa consultoria especializada, que utiliza
+            métodos avançados para recrutamento e seleção, seja de forma
+            passiva, com banco de talentos próprio, networking, marketing e
+            divulgação de vagas, ou de forma ativa, através de hunting. Atuamos
+            na busca de profissionais qualificados em áreas como LDR, SDR, BDR,
+            Closer, Marketing, CRM, CS, CX e CSM.
           </Typography>
           <Typography
             variant="body1"
@@ -64,8 +65,9 @@ const RTLMPage: React.FC = () => {
             <strong style={{ color: colors.primaryGreen }}>
               Outplacement:
             </strong>{" "}
-            As empresas nos contratam para criar um projeto e dar suporte ao
-            colaborador que pretende demitir.
+            Oferecemos suporte personalizado a empresas que desejam desenvolver
+            um projeto de transição para colaboradores em processo de
+            desligamento, proporcionando apoio profissional e estratégico.
           </Typography>
           <Typography
             variant="body1"
@@ -77,8 +79,9 @@ const RTLMPage: React.FC = () => {
             }}
           >
             <strong style={{ color: colors.primaryGreen }}>Replacement:</strong>{" "}
-            As pessoas nos contratam para uma evolução em sua carreira ou para
-            uma recolocação especializada.
+            Apoiamos pessoas em busca de evolução de carreira ou recolocação
+            profissional especializada, garantindo um acompanhamento focado e
+            personalizado para alcançar seus objetivos.
           </Typography>
           <Box sx={{ marginTop: "2rem", textAlign: "center" }}>
             <Button
