@@ -56,11 +56,56 @@ const TecnologiaPage: React.FC = () => {
                   lineHeight: 2.2,
                 }}
               >
-                <li>Inteligência comercial;</li>
-                <li>Inteligência de mercado;</li>
-                <li>CRM;</li>
-                <li>Gestão de tarefas e projetos;</li>
-                <li>Assinatura digital.</li>
+                <strong>1. Inteligência comercial</strong>
+                <p>
+                  Nossa tecnologia de inteligência comercial reúne dados
+                  estratégicos para apoiar decisões de vendas, mapeando
+                  oportunidades e tendências do mercado em tempo real. Essa
+                  solução permite prever demandas, entender o comportamento dos
+                  clientes e identificar as melhores estratégias para maximizar
+                  o potencial de vendas, garantindo maior precisão e
+                  assertividade nas ações comerciais;
+                </p>
+                <strong>2. Inteligência de Mercado</strong>
+                <p>
+                  Com uma plataforma robusta de inteligência de mercado,
+                  analisamos dados relevantes sobre concorrentes, segmentos e
+                  comportamentos de compra. Esse sistema ajuda a identificar
+                  lacunas no mercado, otimizar o posicionamento da empresa e
+                  antecipar mudanças nas preferências dos consumidores,
+                  contribuindo para uma visão mais completa e embasada do
+                  cenário competitivo;
+                </p>
+                <strong>3. CRM</strong>
+                <p>
+                  Nosso sistema de CRM centraliza todas as interações e
+                  informações dos clientes, proporcionando uma gestão eficaz do
+                  relacionamento e aumentando o engajamento. A solução é
+                  projetada para segmentar perfis, personalizar campanhas e
+                  oferecer um acompanhamento detalhado de cada etapa da jornada
+                  do cliente, garantindo um serviço mais direcionado e
+                  satisfatório;
+                </p>
+                <strong>4. Gestão de Tarefas e Projetos</strong>
+                <p>
+                  Para melhorar a produtividade e a colaboração, oferecemos uma
+                  tecnologia de gestão de tarefas e projetos que facilita o
+                  planejamento, o acompanhamento de metas e o controle de
+                  prazos. Esse sistema permite a delegação de tarefas, a
+                  visualização em tempo real do progresso e a integração entre
+                  equipes, promovendo maior alinhamento e eficiência nos
+                  projetos;
+                </p>
+                <strong>5. Assinatura Digital</strong>
+                <p>
+                  Nossa tecnologia de assinatura digital facilita processos de
+                  contratação e assinatura de documentos de forma segura,
+                  eficiente e em conformidade com normas de privacidade. Essa
+                  solução elimina a necessidade de documentos físicos, reduzindo
+                  o tempo de tramitação, otimizando processos e garantindo a
+                  validade jurídica dos documentos, com segurança e praticidade
+                  para clientes e parceiros.
+                </p>
               </Box>
             </Typography>
           </Box>
