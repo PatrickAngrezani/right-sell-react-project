@@ -41,7 +41,7 @@ const Clients: React.FC = () => {
         gutterBottom
         sx={{ color: "#ffffff", fontWeight: "bold", marginBottom: "2rem" }}
       >
-        Nossos Clientes
+        CONHEÇA QUEM JÁ CONFIA EM NOSSAS SOLUÇÕES
       </Typography>
       <Grid container spacing={3} justifyContent="center">
         {clients.map((client, index) => (
