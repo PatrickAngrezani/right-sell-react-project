@@ -53,8 +53,8 @@ const services: Service[] = [
   {
     title: "DIFERENCIAIS",
     description: (
-      <ul style={{ paddingLeft: "1rem", margin: 0 }}>
-        <br/>
+      <ul style={{ paddingLeft: "1rem", margin: 0, listStyleType: "none" }}>
+        <br />
         <li>Sem fidelidade;</li>
         <li>Sem custos de implantação;</li>
         <li>Tecnologia de ponta;</li>
@@ -76,7 +76,10 @@ const services: Service[] = [
           Conheça nossos planos, agende com um especialista!
         </Typography>
         <br />
-        <Box component="ul" sx={{ paddingLeft: "1rem", margin: 0 }}>
+        <Box
+          component="ul"
+          sx={{ paddingLeft: "1rem", margin: 0, listStyleType: "none" }}
+        >
           <li>Plano Basic;</li>
           <li>Plano Standard;</li>
           <li>Plano Premium;</li>
