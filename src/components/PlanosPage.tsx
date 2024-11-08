@@ -17,7 +17,7 @@ const plansData = [
     ],
   },
   {
-    title: "BDR / SDR",
+    title: "SDR / BDR",
     subtitleColor: "silver",
     items: [
       "Tudo que engloba o plano LDR, além de:",
