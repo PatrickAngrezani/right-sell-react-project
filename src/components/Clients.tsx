@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material";
 import Slider from "react-slick";
 
 import antilhasVarejo from "../assets/antilhas-varejo.png";
+import asr from "../assets/asr.png";
 import braniva from "../assets/braniva.png";
 import cadernoVirtual from "../assets/caderno-virtual.png";
 import chaProd from "../assets/cha-prod.png";
@@ -11,6 +12,7 @@ import jmfConsults from "../assets/jmf-consults.png";
 import marcasPatentes from "../assets/marcas-patentes.png";
 import nityoInfotech from "../assets/nityo-infotech.png";
 import noAge from "../assets/no-age.png";
+import optimiza from "../assets/optimiza.jpg";
 import ravim from "../assets/ravim.png";
 import recrutify from "../assets/recrutify.png";
 
@@ -47,16 +49,18 @@ const CustomPrevArrow = (props) => {
 
 const clients: Client[] = [
   { id: 1, name: "Antilhas Varejo", logo: antilhasVarejo },
-  { id: 2, name: "Braniva", logo: braniva },
-  { id: 3, name: "Caderno Virtual", logo: cadernoVirtual },
-  { id: 4, name: "Cha Prod", logo: chaProd },
-  { id: 5, name: "Grupo Forest", logo: grupoForest },
-  { id: 6, name: "JMF Consults", logo: jmfConsults },
-  { id: 7, name: "Marcas e Patentes", logo: marcasPatentes },
-  { id: 8, name: "Nityo Infotech", logo: nityoInfotech },
-  { id: 9, name: "No Age", logo: noAge },
-  { id: 10, name: "Ravim", logo: ravim },
-  { id: 11, name: "Recrutify", logo: recrutify },
+  { id: 2, name: "ASR", logo: asr },
+  { id: 3, name: "Braniva", logo: braniva },
+  { id: 4, name: "Caderno Virtual", logo: cadernoVirtual },
+  { id: 5, name: "Cha Prod", logo: chaProd },
+  { id: 6, name: "Grupo Forest", logo: grupoForest },
+  { id: 7, name: "JMF Consults", logo: jmfConsults },
+  { id: 8, name: "Marcas e Patentes", logo: marcasPatentes },
+  { id: 9, name: "Nityo Infotech", logo: nityoInfotech },
+  { id: 10, name: "No Age", logo: noAge },
+  { id: 11, name: "Optimiza", logo: optimiza },
+  { id: 12, name: "Ravim", logo: ravim },
+  { id: 13, name: "Recrutify", logo: recrutify },
 ];
 
 const ClientCarousel = () => {
