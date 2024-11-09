@@ -16,6 +16,7 @@ import RTLMPage from "./components/RTLMPage.tsx";
 import TecnologiaPage from "./components/TecnologiaPage.tsx";
 import DiferenciaisPage from "./components/DiferenciaisPage.tsx";
 import PlanosPage from "./components/PlanosPage.tsx";
+import FloatingWhatsAppButton from "./components/FloathingWhatsAppButoon.tsx";
 
 const PageWrapper: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
@@ -81,6 +82,7 @@ function App() {
                   <Clients />
                 </div>
                 <Footer />
+                <FloatingWhatsAppButton />
               </>
             }
           />
