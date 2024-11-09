@@ -23,6 +23,7 @@ interface Client {
   id: number;
   name: string;
   logo: string;
+  link: string;
 }
 
 const CustomNextArrow = (props) => {
@@ -48,19 +49,54 @@ const CustomPrevArrow = (props) => {
 };
 
 const clients: Client[] = [
-  { id: 1, name: "Antilhas Varejo", logo: antilhasVarejo },
-  { id: 2, name: "ASR", logo: asr },
-  { id: 3, name: "Braniva", logo: braniva },
-  { id: 4, name: "Caderno Virtual", logo: cadernoVirtual },
-  { id: 5, name: "Cha Prod", logo: chaProd },
-  { id: 6, name: "Grupo Forest", logo: grupoForest },
-  { id: 7, name: "JMF Consults", logo: jmfConsults },
-  { id: 8, name: "Marcas e Patentes", logo: marcasPatentes },
-  { id: 9, name: "Nityo Infotech", logo: nityoInfotech },
-  { id: 10, name: "No Age", logo: noAge },
-  { id: 11, name: "Optimiza", logo: optimiza },
-  { id: 12, name: "Ravim", logo: ravim },
-  { id: 13, name: "Recrutify", logo: recrutify },
+  {
+    id: 1,
+    name: "Antilhas Varejo",
+    logo: antilhasVarejo,
+    link: "https://www.antilhas.com.br/varejo",
+  },
+  { id: 2, name: "ASR", logo: asr, link: "https://www.asrconsult.com.br/asr" },
+  { id: 3, name: "Braniva", logo: braniva, link: "https://braniva.com/" },
+  {
+    id: 4,
+    name: "Caderno Virtual",
+    logo: cadernoVirtual,
+    link: "https://cadernovirtual.com.br/",
+  },
+  { id: 5, name: "Cha Prod", logo: chaProd, link: "http://chaproducoes.com/" },
+  {
+    id: 6,
+    name: "Grupo Forest",
+    logo: grupoForest,
+    link: "https://grupoforest.com.br/",
+  },
+  {
+    id: 7,
+    name: "JMF Consults",
+    logo: jmfConsults,
+    link: "https://www.instagram.com/jmf_consult_group/",
+  },
+  {
+    id: 8,
+    name: "Marcas e Patentes",
+    logo: marcasPatentes,
+    link: "https://b3smarcas.com.br/",
+  },
+  {
+    id: 9,
+    name: "Nityo Infotech",
+    logo: nityoInfotech,
+    link: "https://www.nityo.com/",
+  },
+  { id: 10, name: "No Age", logo: noAge, link: "https://www.noage.com.br/" },
+  {
+    id: 11,
+    name: "Optimiza",
+    logo: optimiza,
+    link: "https://optimizamarketing.com/",
+  },
+  { id: 12, name: "Ravim", logo: ravim, link: "https://ravim.health/" },
+  { id: 13, name: "Recrutify", logo: recrutify, link: "https://recrutify.io/" },
 ];
 
 const ClientCarousel = () => {
@@ -118,18 +154,25 @@ const ClientCarousel = () => {
       <Slider {...settings}>
         {clients.map((client) => (
           <Box key={client.id} sx={{ textAlign: "center", padding: "20px" }}>
-            <img
-              src={client.logo}
-              alt={client.name}
-              style={{
-                width: client.name === "Cha Prod" ? "50px" : "100px",
-                height: "auto",
-                objectFit: "contain",
-                margin: "0 auto",
-                backgroundColor:
-                  client.name === "JMF Consults" ? "#007bb5" : "none",
-              }}
-            />
+            <a
+              href={client.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", outline: "none" }}
+            >
+              <img
+                src={client.logo}
+                alt={client.name}
+                style={{
+                  width: client.name === "Cha Prod" ? "50px" : "100px",
+                  height: "auto",
+                  objectFit: "contain",
+                  margin: "0 auto",
+                  backgroundColor:
+                    client.name === "JMF Consults" ? "#007bb5" : "none",
+                }}
+              />
+            </a>
           </Box>
         ))}
       </Slider>
