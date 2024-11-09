@@ -96,11 +96,13 @@ const Services: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <Box sx={{ padding: "4rem", textAlign: "center" }}>
+    <Box
+      sx={{ padding: "4rem", textAlign: "center", backgroundColor: "#007f3b" }}
+    >
       <Typography
         variant="h4"
         gutterBottom
-        sx={{ fontWeight: "bold", color: "#007f3b" }}
+        sx={{ fontWeight: "bold", color: "white", paddingBottom: "2rem" }}
       >
         Nossas Soluções
       </Typography>

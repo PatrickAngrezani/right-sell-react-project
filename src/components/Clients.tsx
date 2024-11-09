@@ -99,7 +99,7 @@ const ClientCarousel = () => {
         padding: "20px 0",
         width: "100%",
         margin: "auto",
-        backgroundColor: "#007f3b",
+        backgroundColor: "white",
         overflow: "hidden",
       }}
     >
@@ -107,7 +107,7 @@ const ClientCarousel = () => {
         variant="h4"
         textAlign="center"
         gutterBottom
-        sx={{ color: "#ffffff", fontWeight: "bold", marginBottom: "2rem" }}
+        sx={{ color: "#007f3b", fontWeight: "bold", marginBottom: "2rem" }}
       >
         CONHEÇA QUEM JÁ CONFIA EM NOSSAS SOLUÇÕES
       </Typography>
@@ -118,10 +118,12 @@ const ClientCarousel = () => {
               src={client.logo}
               alt={client.name}
               style={{
-                width: client.name === "Cha Prod" ? "40px" : "100px",
+                width: client.name === "Cha Prod" ? "50px" : "100px",
                 height: "auto",
                 objectFit: "contain",
                 margin: "0 auto",
+                backgroundColor:
+                  client.name === "JMF Consults" ? "#007bb5" : "none",
               }}
             />
           </Box>
