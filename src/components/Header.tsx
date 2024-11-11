@@ -217,19 +217,6 @@ const Header: React.FC<HeaderProps> = ({ setScrollTarget }) => {
               Clientes
             </MenuItem>
           </Menu>
-
-          <Box
-            display="flex"
-            alignItems="center"
-            sx={{ ml: 2, paddingRight: "0px" }}
-          >
-            <Typography
-              variant="body1"
-              color="inherit"
-            >
-              (11) 95945-5865
-            </Typography>
-          </Box>
         </Box>
       </Toolbar>
     </AppBar>

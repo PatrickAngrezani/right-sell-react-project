@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Button, IconButton } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import PhoneIcon from "@mui/icons-material/Phone";
 import { colors } from "../colors.tsx";
 import { useNavigate } from "react-router-dom";
 
@@ -34,6 +35,19 @@ const Hero: React.FC = () => {
         >
           <LinkedInIcon />
         </IconButton>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            gap: 0.5,
+            color: "#007f3b",
+          }}
+        >
+          <PhoneIcon />
+          <Typography variant="body1" sx={{ fontWeight: "bold" }}>
+            (11) 95945-5865
+          </Typography>
+        </Box>
       </Box>
       <Box
         sx={{
@@ -67,9 +81,12 @@ const Hero: React.FC = () => {
           foi fundada em 2019 com a missão de conectar empresas aos melhores
           profissionais do mercado em cada etapa do funil comercial, como{" "}
           <em>
-            LDR, SDR, BDR, Closer, CRM, Marketing, Copywriter e Customer Success.
+            LDR, SDR, BDR, Closer, CRM, Marketing, Copywriter e Customer
+            Success.
           </em>{" "}
-          Pioneira no Brasil, somos o primeiro BPO comercial completo, oferecendo uma solução ponta a ponta para otimizar e expandir operações comerciais.
+          Pioneira no Brasil, somos o primeiro BPO comercial completo,
+          oferecendo uma solução ponta a ponta para otimizar e expandir
+          operações comerciais.
         </Typography>
         <Button
           variant="contained"
